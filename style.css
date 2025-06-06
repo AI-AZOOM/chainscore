@@ -1,0 +1,124 @@
+:root {
+  --bg: #ffffff;
+  --text: #111;
+  --primary: #00ffa1;
+  --card: #f2f2f2;
+}
+body.dark {
+  --bg: #0f0f0f;
+  --text: #ffffff;
+  --card: #1e1e1e;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+header {
+  background: var(--card);
+  padding: 25px 20px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+  position: relative;
+}
+header h1 {
+  font-size: 2.2rem;
+  margin: 10px 0 5px;
+  color: var(--primary);
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px 20px;
+}
+.wallet-section {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,255,161,0.1);
+  margin-bottom: 30px;
+}
+input, button {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+button {
+  background: var(--primary);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background: #00e676;
+}
+.score-card {
+  background: var(--card);
+  border-left: 5px solid var(--primary);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,255,161,0.07);
+}
+.score-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 20px;
+  color: #888;
+}
+/* Toggle Switch */
+.toggle-wrapper {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: var(--primary);
+}
+input:checked + .slider:before {
+  transform: translateX(18px);
+}

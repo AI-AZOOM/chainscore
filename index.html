@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChainScore - Onchain Identity</title>
+
+  <!-- PWA & Theming -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/icon-192.png" />
+  <meta name="theme-color" content="#0f0f0f" />
+
+  <!-- External fonts & libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+</head>
+
+<body class="dark">
+  <!-- Header with dark mode toggle -->
+  <header data-aos="fade-down" data-aos-duration="800">
+    <div class="toggle-wrapper">
+      <label class="switch">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <img src="assets/logo.png" alt="ChainScore Logo" style="width:70px; margin-bottom: 10px;">
+    <h1>ChainScore</h1>
+    <p>Your onchain rep, visualized.</p>
+  </header>
+
+  <!-- Wallet input section -->
+  <div class="container">
+    <div class="wallet-section" data-aos="fade-up" data-aos-delay="200">
+      <h2>Enter Wallet Address</h2>
+      <input type="text" id="walletInput" placeholder="0x1234..." />
+      <button onclick="checkScore()">Check Score</button>
+    </div>
+
+    <!-- Results area -->
+    <div id="scoreArea" style="display:none;">
+      <div class="score-card" data-aos="zoom-in" data-aos-delay="400">
+        <p>ChainTrust Score:</p>
+        <div id="scoreValue" class="score-value">00</div>
+      </div>
+      <div class="score-card" data-aos="zoom-in" data-aos-delay="600">
+        <p>Onchain Activity Level:</p>
+        <div id="activityValue">Loading...</div>
+      </div>
+
+      <!-- Twitter Share Button -->
+      <button id="shareBtn" style="display:none; margin-top: 15px;">Share to Twitter</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer data-aos="fade-up" data-aos-delay="800">
+    Built by [YourName] — demo version for portfolio use.
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
